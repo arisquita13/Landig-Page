@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granito | Instalación Certificada de Cubiertas de Cuarzo en León, Gto.</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Iconos (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Configuración personalizada de colores y fuente -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Paleta de Cafés y Beige
+                        'granito-bg': '#FAF8F5',        // Fondo: Beige muy claro
+                        'granito-primary': '#4F443E',   // Texto Principal: Marrón oscuro y rico
+                        'granito-accent': '#A17E5E',    // Acento/Botones: Color camello/café medio
+                        'granito-light': '#D4C1AE',     // Elementos Ligeros: Beige claro
+                        'whatsapp': '#25D366',          // Para el botón de contacto rápido
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Aplicar fuente Inter al cuerpo */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.granito-bg');
+            color: theme('colors.granito-primary');
+        }
+        /* Estilo para los iconos de Lucide */
+        .icon {
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        /* Clase para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: theme('colors.whatsapp');
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            z-index: 99;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilo para el fondo del Hero (Placeholder profesional) */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/4F443E/FAF8F5/png?text=COCINA+DE+LUJO+CON+CUARZO');
+            background-size: cover;
+            background-position: center 30%;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Sección de Cabecera (Header) -->
+    <header class="bg-granito-bg border-b border-granito-light sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo/Nombre de la Empresa -->
+            <h1 class="text-2xl font-bold tracking-tight text-granito-primary">
+                Granito<span class="text-granito-accent">.</span>
+            </h1>
+
+            <!-- Navegación -->
+            <nav class="hidden sm:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-granito-accent transition duration-200">Inicio</a>
+                <a href="#aplicaciones" class="hover:text-granito-accent transition duration-200">Aplicaciones</a>
+                <a href="#catalogo" class="hover:text-granito-accent transition duration-200">Catálogo</a>
+                <a href="#proceso" class="hover:text-granito-accent transition duration-200">Proceso</a>
+                <a href="#contacto" class="hover:text-granito-accent transition duration-200">Cotización</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+
+        <!-- Sección Principal (Hero) - Ahora con Imagen de Fondo -->
+        <section id="inicio" class="relative py-24 md:py-40 px-6 text-center hero-bg rounded-xl overflow-hidden my-8 shadow-2xl">
+            <!-- Overlay oscuro para mejorar la legibilidad del texto -->
+            <div class="absolute inset-0 bg-granito-primary opacity-40"></div>
+            <div class="relative max-w-5xl mx-auto z-10">
+                <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
+                    Venta e Instalación Certificada de Cubiertas de Cuarzo
+                    <span class="block text-granito-light">Premium en León, Gto.</span>
+                </h2>
+                <p class="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+                    **Su proyecto garantizado:** Servicio de Transformación y Colocación Profesional a la Medida en cocinas, baños y mobiliario.
+                </p>
+                <a href="#contacto" class="inline-flex items-center justify-center px-10 py-3 text-lg font-semibold rounded-full bg-granito-accent text-white shadow-xl hover:bg-granito-primary transition duration-300 transform hover:scale-105">
+                    Solicitar Cotización Formal
+                </a>
+            </div>
+        </section>
+
+        <!-- Elementos de Confianza - Marcas Aliadas -->
+        <section class="py-12 px-6">
+            <h3 class="text-lg font-semibold text-center mb-8 uppercase tracking-widest text-granito-accent">
+                Trabajamos con las Marcas de Cuarzo Más Prestigiosas
+            </h3>
+            <div class="flex flex-wrap justify-center items-center gap-10 opacity-80">
+                <!-- Logos de Marcas Premium (Placeholder visual) -->
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Caesarstone" alt="Logo Caesarstone" class="h-10">
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Compac" alt="Logo Compac" class="h-10">
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Quartz+Q" alt="Logo Quartz Q" class="h-10">
+            </div>
+        </section>
+
+        <!-- Sección de Servicios/Aplicaciones Clave - Ahora más visual -->
+        <section id="aplicaciones" class="py-16 md:py-24 px-6 bg-granito-bg rounded-lg shadow-inner">
+            <h3 class="text-3xl font-bold text-center mb-12 text-granito-primary">La Belleza del Cuarzo en Cada Espacio</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Cubiertas de Cocina (Foco B2C) -->
+                <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/D4C1AE/4F443E/png?text=COCINA+MODERNA" alt="Cubiertas de Cuarzo para Cocina" class="w-full h-48 object-cover object-center">
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-semibold mb-3 text-granito-primary">Cubiertas de Cocina</h4>
+                        <p class="text-granito-primary/70 text-sm">
+                            El corazón del hogar. Instalación de cubiertas resistentes a manchas y calor con diseño adaptado a tu estilo de vida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Vanities y Baño (Nicho) -->
+                <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/A17E5E/FAF8F5/png?text=VANITY+DE+CUARZO" alt="Cubiertas de Cuarzo para Baño" class="w-full h-48 object-cover object-center">
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-semibold mb-3 text-granito-primary">Vanities y Baños</h4>
+                        <p class="text-granito-primary/70 text-sm">
+                            Soluciones higiénicas y elegantes para tocadores. Acabados pulcros que elevan la sensación de bienestar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Mobiliario a Medida (Alto Valor) -->
+                <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/4F443E/D4C1AE/png?text=MOBILIARIO+A+MEDIDA" alt="Mobiliario de Cuarzo a Medida" class="w-full h-48 object-cover object-center">
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-semibold mb-3 text-granito-primary">Mobiliario de Diseño</h4>
+                        <p class="text-granito-primary/70 text-sm">
+                            Mesas, barras y revestimientos con corte digital para proyectos arquitectónicos únicos y de alto valor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Muestrario Exclusivo (Mini-Catálogo) -->
+        <section id="catalogo" class="py-16 md:py-24 px-6">
+            <h3 class="text-4xl font-bold text-center mb-6 text-granito-primary">Muestrario Exclusivo de Cuarzo</h3>
+            <p class="text-center text-granito-primary/80 mb-12 max-w-3xl mx-auto">
+                Estos son solo tres ejemplos de la **exclusividad y variedad** que ofrecemos. Contamos con colecciones de tendencia de las mejores marcas.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Muestra 1: Estilo Mármol Clásico (Alto Contraste) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
+                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/F5F5F5/4F443E?text=MARMOL+CLASICO'); background-size: cover; background-position: center;"></div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-granito-primary">Colección Carrara Premium</h4>
+                        <p class="text-sm text-granito-primary/70 mb-4">La veta atemporal con la resistencia inigualable del cuarzo.</p>
+                    </div>
+                </div>
+
+                <!-- Muestra 2: Estilo Concreto Industrial (Tono Neutro) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
+                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/C0C0C0/4F443E?text=CONCRETO+MODERNO'); background-size: cover; background-position: center;"></div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-granito-primary">Colección Urbana Minimal</h4>
+                        <p class="text-sm text-granito-primary/70 mb-4">Estilo industrial y moderno, ideal para ambientes contemporáneos.</p>
+                    </div>
+                </div>
+
+                <!-- Muestra 3: Estilo Granito Oscuro (Tono Rico) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
+                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/333333/D4C1AE?text=OBSCURO+LUJOSO'); background-size: cover; background-position: center;"></div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-granito-primary">Colección Black Galaxy</h4>
+                        <p class="text-sm text-granito-primary/70 mb-4">Un fondo profundo con destellos de lujo y elegancia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                 <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-full bg-granito-primary text-white shadow-xl hover:bg-granito-accent transition duration-300 transform hover:scale-105">
+                    ¡Quiero ver el Catálogo Completo y Cotizar!
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Proceso Transparente (4 Pasos) - Ahora más visual -->
+        <section id="proceso" class="py-16 md:py-24 px-6">
+            <div class="bg-granito-light/30 p-8 md:p-12 rounded-xl border border-granito-light shadow-xl">
+                <h3 class="text-3xl font-bold text-center mb-10 text-granito-primary">El Proceso de Transformación y Colocación Garantizado</h3>
+                <p class="text-center text-granito-primary/80 mb-12 max-w-3xl mx-auto">
+                    Te guiamos paso a paso, desde la selección del material hasta la entrega del proyecto final, con transparencia y certificación.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Paso 1: Medición y Presupuesto -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/300x200/FAF8F5/4F443E?text=Medición+Experta" alt="Imagen de Medición" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">1</div>
+                        <h4 class="font-semibold text-granito-primary mb-1">Medición Experta</h4>
+                        <p class="text-sm text-granito-primary/70">Visita a domicilio para toma de medidas y detalles técnicos de tu espacio.</p>
+                    </div>
+                    <!-- Paso 2: Corte y Fabricación -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/300x200/D4C1AE/4F443E?text=Corte+Digital" alt="Imagen de Corte y Fabricación" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">2</div>
+                        <h4 class="font-semibold text-granito-primary mb-1">Corte Digital a Medida</h4>
+                        <p class="text-sm text-granito-primary/70">Fabricación precisa con tecnología de punta para un ajuste perfecto.</p>
+                    </div>
+                    <!-- Paso 3: Instalación Certificada -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/300x200/A17E5E/FAF8F5?text=Instalación+Profesional" alt="Imagen de Instalación" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">3</div>
+                        <h4 class="font-semibold text-granito-primary mb-1">Colocación Profesional</h4>
+                        <p class="text-sm text-granito-primary/70">Instalación rápida y limpia por marmoleros certificados en León, Gto.</p>
+                    </div>
+                    <!-- Paso 4: Post-Venta y Garantía -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/300x200/4F443E/D4C1AE?text=Soporte+Garantizado" alt="Imagen de Post-Venta y Garantía" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">4</div>
+                        <h4 class="font-semibold text-granito-primary mb-1">Soporte Garantizado</h4>
+                        <p class="text-sm text-granito-primary/70">Entrega de la Guía de Cuidado de Cuarzo y activación de garantía.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto y Dirección (Conversión Alta Fricción) -->
+        <section id="contacto" class="py-16 md:py-24 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white p-8 md:p-12 rounded-xl shadow-2xl shadow-granito-light/40 border border-granito-light">
+                <!-- Columna de Información -->
+                <div>
+                    <h3 class="text-4xl font-bold mb-6 text-granito-primary">Cotiza tu Proyecto Hoy</h3>
+                    <p class="text-granito-primary/80 mb-8 max-w-md">
+                        Completa el formulario para recibir una cotización detallada y personalizada. Nos enfocamos en la precisión y la transparencia de costos.
+                    </p>
+
+                    <!-- Detalle de Dirección -->
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i data-lucide="building" class="icon w-6 h-6 mr-3 mt-1 flex-shrink-0 text-granito-accent"></i>
+                            <div>
+                                <p class="text-granito-primary font-semibold">Ubicación Central</p>
+                                <p class="text-granito-primary/70">León, GTO. (Zona de fácil acceso)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i data-lucide="map" class="icon w-6 h-6 mr-3 mt-1 flex-shrink-0 text-granito-accent"></i>
+                            <div>
+                                <p class="text-granito-primary font-semibold">Dirección de Showroom</p>
+                                <p class="text-granito-primary/70">Calle Naranja, Col. Los Limones</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i data-lucide="phone" class="icon w-6 h-6 mr-3 mt-1 flex-shrink-0 text-granito-accent"></i>
+                            <div>
+                                <p class="text-granito-primary font-semibold">Teléfono Local</p>
+                                <p class="text-granito-primary/70">(477) XXX-XXXX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Formulario de Cotización Estructurado -->
+                <div>
+                    <form class="space-y-4" onsubmit="alert('¡Cotización enviada con éxito! Pronto nos pondremos en contacto.'); return false;">
+                        <input type="text" placeholder="Tu Nombre" class="w-full p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-granito-bg transition duration-200 text-granito-primary" required>
+                        <input type="email" placeholder="Tu Email" class="w-full p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-granito-bg transition duration-200 text-granito-primary" required>
+                        <select class="w-full p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-granito-bg transition duration-200 text-granito-primary" required>
+                            <option value="">¿Tipo de Proyecto?</option>
+                            <option value="Cocina">Cubierta de Cocina</option>
+                            <option value="Bano">Cubierta de Baño / Vanity</option>
+                            <option value="Mobiliario">Mobiliario a Medida</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <input type="number" placeholder="Superficie aproximada en m²" class="w-full p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-granito-bg transition duration-200 text-granito-primary" required>
+                        <textarea placeholder="Comentarios (Material deseado, detalles de ubicación en León)" rows="3" class="w-full p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-granito-bg transition duration-200 text-granito-primary" required></textarea>
+                        <button type="submit" class="w-full py-3 font-semibold rounded-lg bg-granito-primary text-granito-bg hover:bg-granito-accent transition duration-300 shadow-md">
+                            Solicitar Cotización Detallada
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-granito-primary mt-16">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <p class="text-granito-light text-sm">
+                &copy; 2024 Granito. Especialistas Certificados en Cuarzo en León, GTO.
+            </p>
+            <p class="text-granito-light/70 text-xs mt-1">
+                Aviso de Privacidad | Dirección: Calle Naranja, Col. Los Limones.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp (Conversión Baja Fricción) -->
+    <a href="https://wa.me/52477XXXXXXXX" target="_blank" class="whatsapp-float flex items-center justify-center" aria-label="Enviar mensaje por WhatsApp">
+        <i data-lucide="message-square-text" class="icon w-8 h-8 text-white"></i>
+    </a>
+
+    <!-- Inicialización de iconos de Lucide y Script de Cuidado de Cuarzo -->
+    <script>
+        // Inicializa los iconos después de que el DOM esté listo
+        lucide.createIcons();
+
+        // Placeholder para la funcionalidad del botón de WhatsApp
+        // Nota: Reemplazar XXXXXXXXX con el número de teléfono local (477...)
+    </script>
+</body>
+</html>
