@@ -59,11 +59,57 @@
             transform: scale(1.1);
         }
 
-        /* Estilo para el fondo del Hero (Placeholder profesional) */
+        /* Estilo para el fondo del Hero (Usando un placeholder descriptivo) */
         .hero-bg {
-            background-image: url('https://placehold.co/1920x800/4F443E/FAF8F5/png?text=COCINA+DE+LUJO+CON+CUARZO');
+            /* REEMPLAZAR con una imagen real de una cocina de lujo con cubiertas de cuarzo blanco veteado */
+            background-image: url('https://placehold.co/1920x800/4F443E/FAF8F5?text=FOTO+PROFESIONAL+COCINA+CUARZO');
             background-size: cover;
-            background-position: center 30%;
+            background-position: center;
+        }
+        
+        /* Estilos para las muestras del catálogo (SIMULACIÓN DE TEXTURAS DE ALTA CALIDAD) */
+        .catalogo-muestra {
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            /* Importante: Las URL de placehold.co deben ser reemplazadas por imágenes reales de las losas de cuarzo */
+        }
+
+        /* Muestra 1: Carrara Premium (Look de Mármol Blanco/Veta) */
+        .carrara-premium {
+            background-image: url('https://placehold.co/600x300/F5F5F5/808080/png?text=Cuarzo+Carrara+Premium');
+        }
+        /* Muestra 2: Urbana Minimal (Look de Concreto/Gris sutil) */
+        .urbana-minimal {
+            background-image: url('https://placehold.co/600x300/A0A0A0/FFFFFF/png?text=Cuarzo+Urbano+Gris');
+        }
+        /* Muestra 3: Black Galaxy (Look Negro/Destellos) */
+        .black-galaxy {
+            background-image: url('https://placehold.co/600x300/111111/D4C1AE/png?text=Cuarzo+Black+Galaxy');
+        }
+        
+        /* Muestra Destacada (Nueva para re-engagement) */
+        .muestra-destacada {
+            background-image: url('https://placehold.co/1000x400/D4C1AE/4F443E/png?text=Cuarzo+Calacatta+Oro+Premium');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Estilos para el spinner de carga */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid theme('colors.granito-accent');
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -90,7 +136,7 @@
 
     <main class="max-w-7xl mx-auto">
 
-        <!-- Sección Principal (Hero) - Ahora con Imagen de Fondo -->
+        <!-- Sección Principal (Hero) - Con Imagen de Fondo Profesional -->
         <section id="inicio" class="relative py-24 md:py-40 px-6 text-center hero-bg rounded-xl overflow-hidden my-8 shadow-2xl">
             <!-- Overlay oscuro para mejorar la legibilidad del texto -->
             <div class="absolute inset-0 bg-granito-primary opacity-40"></div>
@@ -115,20 +161,43 @@
             </h3>
             <div class="flex flex-wrap justify-center items-center gap-10 opacity-80">
                 <!-- Logos de Marcas Premium (Placeholder visual) -->
-                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Caesarstone" alt="Logo Caesarstone" class="h-10">
-                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Compac" alt="Logo Compac" class="h-10">
-                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Quartz+Q" alt="Logo Quartz Q" class="h-10">
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Marca+Silestone" alt="Logo Silestone" class="h-10">
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Marca+Ceasarstone" alt="Logo Caesarstone" class="h-10">
+                <img src="https://placehold.co/140x40/FAF8F5/A17E5E/png?text=Marca+Compac" alt="Logo Compac" class="h-10">
+            </div>
+        </section>
+        
+        <!-- Sección de Muestra Destacada del Mes (Nuevo para Re-engagement) -->
+        <section class="py-16 px-6">
+            <div class="muestra-destacada h-96 rounded-xl shadow-2xl shadow-granito-accent/50">
+                <div class="absolute inset-0 bg-granito-primary/60 hover:bg-granito-primary/40 transition duration-300 rounded-xl flex items-center justify-center">
+                    <div class="text-center p-6">
+                        <span class="inline-block bg-white text-granito-accent text-sm font-bold uppercase px-3 py-1 rounded-full mb-4 tracking-widest">
+                            Muestra Destacada del Mes
+                        </span>
+                        <h3 class="text-4xl font-extrabold text-white mb-4 leading-tight">
+                            Cuarzo Calacatta Oro: La Veta que Inspira Lujo
+                        </h3>
+                        <p class="text-white/90 max-w-lg mx-auto mb-6">
+                            Descubre la losa más solicitada de nuestra colección, perfecta para cocinas de alto diseño. ¡Pide tu cotización con un beneficio especial este mes!
+                        </p>
+                        <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full bg-granito-accent text-white hover:bg-granito-bg hover:text-granito-primary transition duration-300">
+                            Ver Detalles y Promoción
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Sección de Servicios/Aplicaciones Clave - Ahora más visual -->
+        <!-- Sección de Servicios/Aplicaciones Clave - Con imágenes de proyecto -->
         <section id="aplicaciones" class="py-16 md:py-24 px-6 bg-granito-bg rounded-lg shadow-inner">
             <h3 class="text-3xl font-bold text-center mb-12 text-granito-primary">La Belleza del Cuarzo en Cada Espacio</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tarjeta 1: Cubiertas de Cocina (Foco B2C) -->
+                <!-- Tarjeta 1: Cubiertas de Cocina -->
                 <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/600x400/D4C1AE/4F443E/png?text=COCINA+MODERNA" alt="Cubiertas de Cuarzo para Cocina" class="w-full h-48 object-cover object-center">
+                    <!-- IMPORTANTE: Reemplazar con URL de imagen real de una cocina instalada -->
+                    <img src="https://image.url/cocina-cuarzo-moderna.jpg" alt="Cubiertas de Cuarzo para Cocina" class="w-full h-48 object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D4C1AE/4F443E?text=COCINA';">
                     <div class="p-6 text-center">
                         <h4 class="text-xl font-semibold mb-3 text-granito-primary">Cubiertas de Cocina</h4>
                         <p class="text-granito-primary/70 text-sm">
@@ -137,9 +206,10 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 2: Vanities y Baño (Nicho) -->
+                <!-- Tarjeta 2: Vanities y Baño -->
                 <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/600x400/A17E5E/FAF8F5/png?text=VANITY+DE+CUARZO" alt="Cubiertas de Cuarzo para Baño" class="w-full h-48 object-cover object-center">
+                    <!-- IMPORTANTE: Reemplazar con URL de imagen real de un vanity de baño en cuarzo -->
+                    <img src="https://image.url/vanity-cuarzo.jpg" alt="Cubiertas de Cuarzo para Baño" class="w-full h-48 object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/600x400/A17E5E/FAF8F5?text=VANITY';">
                     <div class="p-6 text-center">
                         <h4 class="text-xl font-semibold mb-3 text-granito-primary">Vanities y Baños</h4>
                         <p class="text-granito-primary/70 text-sm">
@@ -148,9 +218,10 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 3: Mobiliario a Medida (Alto Valor) -->
+                <!-- Tarjeta 3: Mobiliario a Medida -->
                 <div class="bg-white rounded-xl shadow-xl border border-granito-light/50 overflow-hidden hover:shadow-2xl transition duration-300">
-                    <img src="https://placehold.co/600x400/4F443E/D4C1AE/png?text=MOBILIARIO+A+MEDIDA" alt="Mobiliario de Cuarzo a Medida" class="w-full h-48 object-cover object-center">
+                    <!-- IMPORTANTE: Reemplazar con URL de imagen real de una mesa o barra de diseño en cuarzo -->
+                    <img src="https://image.url/mesa-cuarzo-diseno.jpg" alt="Mobiliario de Cuarzo a Medida" class="w-full h-48 object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/600x400/4F443E/D4C1AE?text=MOBILIARIO';">
                     <div class="p-6 text-center">
                         <h4 class="text-xl font-semibold mb-3 text-granito-primary">Mobiliario de Diseño</h4>
                         <p class="text-granito-primary/70 text-sm">
@@ -161,7 +232,7 @@
             </div>
         </section>
 
-        <!-- Sección de Muestrario Exclusivo (Mini-Catálogo) -->
+        <!-- Sección de Muestrario Exclusivo (Mini-Catálogo) - MUESTRAS DE MATERIAL -->
         <section id="catalogo" class="py-16 md:py-24 px-6">
             <h3 class="text-4xl font-bold text-center mb-6 text-granito-primary">Muestrario Exclusivo de Cuarzo</h3>
             <p class="text-center text-granito-primary/80 mb-12 max-w-3xl mx-auto">
@@ -169,9 +240,10 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Muestra 1: Estilo Mármol Clásico (Alto Contraste) -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
-                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/F5F5F5/4F443E?text=MARMOL+CLASICO'); background-size: cover; background-position: center;"></div>
+                <!-- Muestra 1: Estilo Mármol Clásico (Veta) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center hover:shadow-2xl transition duration-300">
+                    <!-- La clase 'carrara-premium' usa un placeholder que simula una veta de mármol blanco -->
+                    <div class="h-48 catalogo-muestra carrara-premium"></div>
                     <div class="p-4">
                         <h4 class="text-xl font-semibold text-granito-primary">Colección Carrara Premium</h4>
                         <p class="text-sm text-granito-primary/70 mb-4">La veta atemporal con la resistencia inigualable del cuarzo.</p>
@@ -179,8 +251,9 @@
                 </div>
 
                 <!-- Muestra 2: Estilo Concreto Industrial (Tono Neutro) -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
-                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/C0C0C0/4F443E?text=CONCRETO+MODERNO'); background-size: cover; background-position: center;"></div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center hover:shadow-2xl transition duration-300">
+                    <!-- La clase 'urbana-minimal' usa un placeholder que simula una textura gris industrial -->
+                    <div class="h-48 catalogo-muestra urbana-minimal"></div>
                     <div class="p-4">
                         <h4 class="text-xl font-semibold text-granito-primary">Colección Urbana Minimal</h4>
                         <p class="text-sm text-granito-primary/70 mb-4">Estilo industrial y moderno, ideal para ambientes contemporáneos.</p>
@@ -188,14 +261,49 @@
                 </div>
 
                 <!-- Muestra 3: Estilo Granito Oscuro (Tono Rico) -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center">
-                    <div class="h-48" style="background-image: url('https://placehold.co/600x300/333333/D4C1AE?text=OBSCURO+LUJOSO'); background-size: cover; background-position: center;"></div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-4 border-granito-accent/50 text-center hover:shadow-2xl transition duration-300">
+                    <!-- La clase 'black-galaxy' usa un placeholder que simula una textura negra con destellos -->
+                    <div class="h-48 catalogo-muestra black-galaxy"></div>
                     <div class="p-4">
                         <h4 class="text-xl font-semibold text-granito-primary">Colección Black Galaxy</h4>
                         <p class="text-sm text-granito-primary/70 mb-4">Un fondo profundo con destellos de lujo y elegancia.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- SECCIÓN: ASESOR DE ESTILO CON IA (MEJORADO CON MOOD BOARD) -->
+            <div class="bg-granito-accent/10 p-8 mt-16 rounded-xl border border-granito-accent/50 shadow-inner">
+                <div class="flex items-center justify-center mb-6">
+                    <i data-lucide="sparkles" class="icon w-8 h-8 text-granito-accent mr-3"></i>
+                    <h4 class="text-2xl font-bold text-granito-primary">Asesor de Estilo con IA ✨</h4>
+                </div>
+                <p class="text-center text-granito-primary/80 mb-6 max-w-2xl mx-auto">
+                    Describe tu visión (e.g., "Quiero una cocina moderna con mucho blanco y madera clara") y nuestra IA te recomendará el estilo, el material de cuarzo perfecto y un **Mood Board Visual** que lo complemente.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 mb-8 max-w-4xl mx-auto">
+                    <textarea id="stylePrompt" placeholder="Describe tu proyecto aquí (e.g., 'Vanity de baño pequeño, elegante, que combine con azulejo azul marino')." rows="2" class="flex-grow p-3 border border-granito-light focus:border-granito-accent focus:ring-1 focus:ring-granito-accent rounded-lg bg-white text-granito-primary"></textarea>
+                    <button id="recommendationButton" class="flex-shrink-0 flex items-center justify-center px-6 py-3 font-semibold rounded-lg bg-granito-accent text-white hover:bg-granito-primary transition duration-300 shadow-md disabled:opacity-50" onclick="generateStyleRecommendation()">
+                        <span id="buttonText">Generar Recomendación</span>
+                        <div id="spinner" class="spinner ml-2 hidden"></div>
+                    </button>
+                </div>
+
+                <!-- Área de Resultados -->
+                <div id="recommendationOutput" class="mt-4 p-6 bg-white rounded-xl border border-granito-light shadow-lg hidden">
+                    <h5 class="text-xl font-semibold mb-3 text-granito-accent flex items-center">
+                        <i data-lucide="check-circle" class="icon w-5 h-5 mr-2"></i>
+                        Tu Estilo Sugerido:
+                    </h5>
+                    <!-- Contenedor para el texto generado y formateado -->
+                    <div id="geminiText" class="text-granito-primary/90 leading-relaxed space-y-3"></div>
+                    <div id="sourcesContainer" class="mt-4 text-xs text-granito-primary/60 border-t pt-2 hidden">
+                        <span class="font-semibold">Fuentes:</span>
+                        <ul id="sourcesList" class="list-disc list-inside ml-2 space-y-1"></ul>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN SECCIÓN IA -->
 
             <div class="text-center mt-12">
                  <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-full bg-granito-primary text-white shadow-xl hover:bg-granito-accent transition duration-300 transform hover:scale-105">
@@ -204,7 +312,7 @@
             </div>
         </section>
 
-        <!-- Sección de Proceso Transparente (4 Pasos) - Ahora más visual -->
+        <!-- Sección de Proceso Transparente (4 Pasos) - Con imágenes de acción -->
         <section id="proceso" class="py-16 md:py-24 px-6">
             <div class="bg-granito-light/30 p-8 md:p-12 rounded-xl border border-granito-light shadow-xl">
                 <h3 class="text-3xl font-bold text-center mb-10 text-granito-primary">El Proceso de Transformación y Colocación Garantizado</h3>
@@ -214,28 +322,32 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Paso 1: Medición y Presupuesto -->
                     <div class="text-center">
-                        <img src="https://placehold.co/300x200/FAF8F5/4F443E?text=Medición+Experta" alt="Imagen de Medición" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                         <!-- IMPORTANTE: Reemplazar con URL de imagen real de un técnico midiendo o planificando -->
+                        <img src="https://image.url/tecnico-midiendo.jpg" alt="Técnico midiendo una cocina" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3" onerror="this.onerror=null; this.src='https://placehold.co/300x200/FAF8F5/4F443E?text=Paso+1+Medición';">
                         <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">1</div>
                         <h4 class="font-semibold text-granito-primary mb-1">Medición Experta</h4>
                         <p class="text-sm text-granito-primary/70">Visita a domicilio para toma de medidas y detalles técnicos de tu espacio.</p>
                     </div>
                     <!-- Paso 2: Corte y Fabricación -->
                     <div class="text-center">
-                        <img src="https://placehold.co/300x200/D4C1AE/4F443E?text=Corte+Digital" alt="Imagen de Corte y Fabricación" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                         <!-- IMPORTANTE: Reemplazar con URL de imagen real de maquinaria de corte de cuarzo -->
+                        <img src="https://image.url/maquinaria-corte-cuarzo.jpg" alt="Maquinaria de corte de cuarzo" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3" onerror="this.onerror=null; this.src='https://placehold.co/300x200/D4C1AE/4F443E?text=Paso+2+Corte';">
                         <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">2</div>
                         <h4 class="font-semibold text-granito-primary mb-1">Corte Digital a Medida</h4>
                         <p class="text-sm text-granito-primary/70">Fabricación precisa con tecnología de punta para un ajuste perfecto.</p>
                     </div>
                     <!-- Paso 3: Instalación Certificada -->
                     <div class="text-center">
-                        <img src="https://placehold.co/300x200/A17E5E/FAF8F5?text=Instalación+Profesional" alt="Imagen de Instalación" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                         <!-- IMPORTANTE: Reemplazar con URL de imagen real de marmoleros instalando la cubierta -->
+                        <img src="https://image.url/marmoleros-instalando.jpg" alt="Marmoleros instalando cubierta" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3" onerror="this.onerror=null; this.src='https://placehold.co/300x200/A17E5E/FAF8F5?text=Paso+3+Instalación';">
                         <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">3</div>
                         <h4 class="font-semibold text-granito-primary mb-1">Colocación Profesional</h4>
                         <p class="text-sm text-granito-primary/70">Instalación rápida y limpia por marmoleros certificados en León, Gto.</p>
                     </div>
                     <!-- Paso 4: Post-Venta y Garantía -->
                     <div class="text-center">
-                        <img src="https://placehold.co/300x200/4F443E/D4C1AE?text=Soporte+Garantizado" alt="Imagen de Post-Venta y Garantía" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3">
+                         <!-- IMPORTANTE: Reemplazar con URL de imagen real de la cubierta final pulida o documento de garantía -->
+                        <img src="https://image.url/cubierta-limpia-final.jpg" alt="Cubierta final pulida" class="w-full h-40 object-cover object-center rounded-lg shadow-md mb-3" onerror="this.onerror=null; this.src='https://placehold.co/300x200/4F443E/D4C1AE?text=Paso+4+Garantía';">
                         <div class="w-10 h-10 flex items-center justify-center rounded-full bg-granito-accent text-white font-bold mx-auto mb-2 text-xl">4</div>
                         <h4 class="font-semibold text-granito-primary mb-1">Soporte Garantizado</h4>
                         <p class="text-sm text-granito-primary/70">Entrega de la Guía de Cuidado de Cuarzo y activación de garantía.</p>
@@ -323,13 +435,162 @@
         <i data-lucide="message-square-text" class="icon w-8 h-8 text-white"></i>
     </a>
 
-    <!-- Inicialización de iconos de Lucide y Script de Cuidado de Cuarzo -->
+    <!-- LÓGICA DE LA APLICACIÓN Y GEMINI API -->
     <script>
-        // Inicializa los iconos después de que el DOM esté listo
+        // Inicializa los iconos de Lucide
         lucide.createIcons();
+        
+        // --- Configuración de la API de Gemini ---
+        const apiKey = ""; // La clave se provee en el entorno de Canvas
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
-        // Placeholder para la funcionalidad del botón de WhatsApp
-        // Nota: Reemplazar XXXXXXXXX con el número de teléfono local (477...)
+        // Función de retraso para backoff
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+        // Función principal para la recomendación de estilo
+        async function generateStyleRecommendation() {
+            const prompt = document.getElementById('stylePrompt').value;
+            const outputDiv = document.getElementById('recommendationOutput');
+            const geminiText = document.getElementById('geminiText');
+            const button = document.getElementById('recommendationButton');
+            const buttonText = document.getElementById('buttonText');
+            const spinner = document.getElementById('spinner');
+            const sourcesContainer = document.getElementById('sourcesContainer');
+            const sourcesList = document.getElementById('sourcesList');
+
+            if (prompt.trim() === "") {
+                geminiText.innerHTML = '<p class="text-red-600 font-semibold">Por favor, describe tu visión o estilo deseado para que podamos ayudarte.</p>';
+                outputDiv.classList.remove('hidden');
+                return;
+            }
+
+            // Ocultar resultados previos y mostrar cargando
+            outputDiv.classList.add('hidden');
+            sourcesContainer.classList.add('hidden');
+            sourcesList.innerHTML = '';
+            button.disabled = true;
+            buttonText.textContent = 'Analizando...';
+            spinner.classList.remove('hidden');
+            geminiText.innerHTML = '<p class="text-center text-granito-accent font-medium">Generando tu recomendación personalizada...</p>';
+            outputDiv.classList.remove('hidden');
+
+            // --- SYSTEM PROMPT MEJORADO para estructura y Mood Board ---
+            const systemPrompt = `Eres un Marmolero de Lujo y Diseñador de Interiores experto en cubiertas de Cuarzo de León, Guanajuato. Tu tarea es analizar la breve descripción de un cliente (como un estilo o necesidad) y proporcionar una respuesta estructurada con tres secciones claras.
+
+1.  **Nombre del Estilo Sugerido:** Un nombre atractivo y descriptivo para el estilo. (Ej: 'Minimalismo Escandinavo con Toque Cálido').
+2.  **Recomendación de Material:** El tipo de cuarzo ideal (Ej: 'Carrara Premium') y un breve párrafo (máximo 4 líneas) explicando por qué se alinea con la visión y mencionando un beneficio clave (resistencia, fácil limpieza, veta, etc.).
+3.  **Mood Board Sugerido:** Una lista de 3 a 4 elementos visuales o de color (acabados, colores de pared, metales) que complementarían perfectamente la cubierta de cuarzo sugerida. (Ej: Grifería en latón satinado, Gabinetes de madera de nogal, Pintura gris paloma).
+
+Tu respuesta debe estar completamente en español y usar un tono profesional, inspirador y de alta calidad. Utiliza negritas (**) para resaltar los títulos de cada sección.`;
+
+            const userQuery = `Mi proyecto es: "${prompt}"`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                // Usamos Google Search para grounding, por si el usuario menciona tendencias o estilos recientes.
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            let response;
+            let maxRetries = 3;
+            let delay = 1000;
+
+            // Lógica de Reintento con Backoff Exponencial
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        break; // Éxito, salir del loop
+                    } else if (response.status === 429 && i < maxRetries - 1) {
+                        // Too Many Requests, reintentar
+                        await sleep(delay);
+                        delay *= 2;
+                    } else {
+                        throw new Error(`Error en la API: ${response.status} ${response.statusText}`);
+                    }
+                } catch (error) {
+                    // Si falla la red o el parsing, reintentar (si no es el último intento)
+                    if (i < maxRetries - 1) {
+                        await sleep(delay);
+                        delay *= 2;
+                    } else {
+                        console.error('Error al generar recomendación:', error);
+                        geminiText.innerHTML = '<p class="text-red-600">Lo sentimos, hubo un error al generar la recomendación. Inténtalo de nuevo más tarde.</p>';
+                        button.disabled = false;
+                        buttonText.textContent = 'Generar Recomendación';
+                        spinner.classList.add('hidden');
+                        return;
+                    }
+                }
+            }
+
+            try {
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    let text = candidate.content.parts[0].text;
+                    let sources = [];
+                    const groundingMetadata = candidate.groundingMetadata;
+                    
+                    // --- NUEVO FORMATO DE TEXTO ---
+                    // 1. Reemplazar saltos de línea doble con cierres de párrafo y nuevos divisores
+                    text = text.trim().replace(/\n\n/g, '</div><div class="mt-4">'); 
+                    
+                    // 2. Reemplazar títulos de sección (que estarán en negritas **Title**) con etiquetas de encabezado estilizadas
+                    text = text.replace(/\*\*(.*?)\*\*/g, (match, title) => {
+                        // Usamos un estilo que se integra mejor al diseño
+                        return `<h6 class="text-granito-primary font-bold mt-4 mb-2 border-b border-granito-light/50 pb-1 text-base">${title.trim()}</h6>`;
+                    });
+
+                    // 3. Reemplazar saltos de línea simples por etiquetas <br> (para listas)
+                    text = text.replace(/\n/g, '<br>');
+
+                    // 4. Envolver el contenido en un div inicial
+                    geminiText.innerHTML = `<div class="text-granito-primary/90">${text}</div>`;
+                    
+                    // Extraer y mostrar fuentes (citaciones)
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+
+                        if (sources.length > 0) {
+                            sourcesContainer.classList.remove('hidden');
+                            sourcesList.innerHTML = ''; // Limpiar lista
+                            sources.forEach(source => {
+                                const listItem = document.createElement('li');
+                                listItem.innerHTML = `<a href="${source.uri}" target="_blank" class="text-granito-accent hover:underline">${source.title}</a>`;
+                                sourcesList.appendChild(listItem);
+                            });
+                        }
+                    }
+
+                } else {
+                    geminiText.innerHTML = '<p class="text-red-600">No se pudo obtener una recomendación válida. Intenta con una descripción más detallada.</p>';
+                }
+
+            } catch (error) {
+                console.error('Error al procesar la respuesta JSON:', error);
+                geminiText.innerHTML = '<p class="text-red-600">Ocurrió un error inesperado. Por favor, revisa la consola para más detalles.</p>';
+            }
+            
+            // Revertir el estado del botón
+            button.disabled = false;
+            buttonText.textContent = 'Generar Recomendación';
+            spinner.classList.add('hidden');
+        }
     </script>
 </body>
 </html>
